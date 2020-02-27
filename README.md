@@ -102,8 +102,8 @@ This container will generate new SSH host keys at first run. To avoid that your 
 
 ```
 docker run \
-    -v /host/ssh_host_ed25519_key:/etc/ssh/ssh_host_ed25519_key \
-    -v /host/ssh_host_rsa_key:/etc/ssh/ssh_host_rsa_key \
+    -v /host/ssh_host_ed25519_key:/etc/sftp/ssh_host_ed25519_key \
+    -v /host/ssh_host_rsa_key:/etc/sftp/ssh_host_rsa_key \
     -v /host/share:/home/foo/share \
     -p 2222:22 -d extensive-it/sftp \
     foo::1001
