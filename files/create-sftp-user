@@ -71,7 +71,7 @@ useradd "${useraddOptions[@]}" "$user"
 # to avoid problems on alpine when the user name contains a '.'
 uid="$(id -u "$user")"
 
-if [ ! -f "/home/$user" ]; then
+if [ ! -d "/home/$user" ]; then
   mkdir -p "/home/$user"
   chown "$uid:users" "/home/$user"
   chmod 755 "/home/$user"
